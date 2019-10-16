@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db:
+    image: postgres:10
+    restart: always
+    volumes:
+      - ./.persistence/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  dashboard:
+    build: ./dashboard
+    restart: always
+    volumes:
+      - ./dashboard:/app
+    ports:
+      - 127.0.0.1:8080:8080
