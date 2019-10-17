@@ -1,12 +1,16 @@
 version: '3'
 services:
   db:
-    image: postgres:10
+    image: postgres:10-alpine
     restart: always
     volumes:
       - ./.persistence/db:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: postgres
+
+  redis:
+    image: redis:5-alpine
+    restart: always
 
   dashboard:
     build: ./dashboard
