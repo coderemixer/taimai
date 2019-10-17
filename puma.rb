@@ -4,8 +4,8 @@ environment 'production'
 
 workers 4
 
-pidfile '.pids/pte.pid'
-state_path '.pids/pte.state'
+pidfile '.pids/app.pid'
+state_path '.pids/app.state'
 stdout_redirect '.pids/stdout', '.pids/stderr', true
 
 bind 'tcp://0.0.0.0:9292'
