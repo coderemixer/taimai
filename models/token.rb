@@ -6,6 +6,6 @@ class Token < Ohm::Model
   index :token
 
   def user
-    # TODO: Link with user model
+    User.find(self.user_id)
   end
 end
