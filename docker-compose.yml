@@ -17,5 +17,20 @@ services:
     restart: always
     volumes:
       - ./dashboard:/app
+    depends_on:
+      - web
     ports:
       - 127.0.0.1:8080:8080
+
+  web:
+    build: .
+    restart: always
+    volumes:
+      - .:/app
+    ports:
+      - 127.0.0.1:9292:9292
+    depends_on:
+      - db
+      - redis
+    environment:
+      RACK_ENV: production
