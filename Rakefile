@@ -10,11 +10,11 @@ namespace :run do
   end
 
   task :stop do
-    sh 'pumactl -F puma.rb -S .pids/pte.state -P .pids/pte.pid stop'
+    sh 'pumactl -F puma.rb -S .pids/app.state -P .pids/app.pid stop'
   end
 
   task :restart do
-    sh 'pumactl -F puma.rb -S .pids/pte.state -P .pids/pte.pid restart'
+    sh 'pumactl -F puma.rb -S .pids/app.state -P .pids/app.pid restart'
   end
 end
 
