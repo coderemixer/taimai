@@ -1,4 +1,5 @@
 require 'yaml'
+require 'yard'
 
 namespace :run do
   task :serve do
@@ -22,7 +23,7 @@ namespace :db do
   require 'bundler'
   Bundler.require
   Sequel.extension :migration
-  require './initializers/sequel'
+  require './app/initializers/sequel'
 
   task :version do
     version = if DB.tables.include?(:schema_info)
@@ -50,6 +51,12 @@ namespace :db do
     Rake::Task['db:version'].execute
   end
 end
+
+YARD::Rake::YardocTask.new do |t|
+  t.files         = ['app/**/*.rb']
+  t.options = ['markup-provider=kramdown']
+  t.stats_options = ['--list-undoc']
+ end
 
 task :test do
   exec "cutest tests/*.rb"
