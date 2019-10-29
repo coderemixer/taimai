@@ -1,0 +1,20 @@
+language: ruby
+
+rvm:
+  - 2.5.7
+  - 2.6.5
+
+services:
+  - postgresql
+  - redis-server
+
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+
+script:
+  - bundle install
+  - bundle exec rake db:migrate
+  - bundle exec rake
+
+env:
+  - DB=postgres RACK_ENV=test

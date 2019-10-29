@@ -11,3 +11,9 @@ production:
   database: postgres
   user: postgres
   password: postgres
+
+test:
+  adapter: postgres
+  host: localhost
+  database: travis_ci_test
+  user: postgres
