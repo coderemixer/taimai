@@ -34,20 +34,20 @@ namespace :db do
   end
 
   task :migrate do
-    Sequel::Migrator.run(DB, 'migrations')
+    Sequel::Migrator.run(DB, './app/migrations')
     Rake::Task['db:version'].execute
   end
 
   task :rollback do |_t, args|
     args.with_defaults(:target => 0)
 
-    Sequel::Migrator.run(DB, 'migrations', :target => args[:target].to_i)
+    Sequel::Migrator.run(DB, './app/migrations', :target => args[:target].to_i)
     Rake::Task['db:version'].execute
   end
 
   task :reset do
-    Sequel::Migrator.run(DB, 'migrations', :target => 0)
-    Sequel::Migrator.run(DB, 'migrations')
+    Sequel::Migrator.run(DB, './app/migrations', :target => 0)
+    Sequel::Migrator.run(DB, './app/migrations')
     Rake::Task['db:version'].execute
   end
 end
