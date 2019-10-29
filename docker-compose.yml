@@ -33,4 +33,4 @@ services:
       - db
       - redis
     environment:
-      RACK_ENV: production
+      RACK_ENV: development

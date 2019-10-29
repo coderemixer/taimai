@@ -52,7 +52,7 @@ namespace :db do
 end
 
 task :test do
-  exec "cutest test/*.rb"
+  exec "cutest tests/*.rb"
 end
 
 task :default => :test

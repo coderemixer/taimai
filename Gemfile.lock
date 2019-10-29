@@ -27,6 +27,8 @@ GEM
     rack-cors (0.4.1)
     rack-protection (2.0.7)
       rack
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
@@ -68,6 +70,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma
   rack-cors (~> 0.4)
+  rack-test
   rake (~> 12.0)
   rerun
   sequel (~> 5.0)

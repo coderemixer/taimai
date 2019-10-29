@@ -19,6 +19,10 @@ gem 'sidekiq', '~> 6.0'
 gem 'yajl-ruby', require: 'yajl'
 
 group :development do
-  gem 'cutest', '~> 1.2'
   gem 'rerun'
+end
+
+group :test do
+  gem 'cutest', '~> 1.2'
+  gem 'rack-test'
 end
