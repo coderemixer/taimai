@@ -1,3 +1,3 @@
 #\ -s puma
-require './server'
+require './app/server'
 run Route

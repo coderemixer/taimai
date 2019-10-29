@@ -60,6 +60,7 @@ GEM
       redic (~> 1.5)
     tilt (2.0.10)
     yajl-ruby (1.4.1)
+    yard (0.9.20)
 
 PLATFORMS
   ruby
@@ -78,6 +79,7 @@ DEPENDENCIES
   sinatra (~> 2.0)
   sinatra-contrib
   yajl-ruby
+  yard (~> 0.9.20)
 
 BUNDLED WITH
    1.17.2

@@ -17,6 +17,7 @@ gem 'sidekiq', '~> 6.0'
 
 # Gems for misc
 gem 'yajl-ruby', require: 'yajl'
+gem 'yard', '~> 0.9.20', require: false
 
 group :development do
   gem 'rerun'
