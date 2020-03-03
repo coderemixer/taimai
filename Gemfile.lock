@@ -21,7 +21,7 @@ GEM
       redic (~> 1.5.0)
       stal
     pg (1.1.4)
-    puma (4.2.1)
+    puma (4.3.3)
       nio4r (~> 2.0)
     rack (2.0.7)
     rack-cors (0.4.1)
