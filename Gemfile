@@ -6,7 +6,7 @@ gem 'rake', '~> 12.0'
 # Gems for web
 gem 'sinatra', '~> 2.0', require: 'sinatra/base'
 gem 'sinatra-contrib'
-gem 'rack-cors', '~> 0.4', require: 'rack/cors'
+gem 'rack-cors', '~> 1.0', require: 'rack/cors'
 gem 'puma'
 
 # Gems for database
