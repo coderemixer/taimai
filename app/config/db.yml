@@ -11,5 +11,4 @@ test:
   database: travis_ci_test
   user: postgres
 
-staging: <%= `heroku config:get DATABASE_URL -a taimai` %>
-production: <%= `heroku config:get DATABASE_URL -a taimai-demo` %>
+production: <%= ENV['DATABASE_URL'] %>

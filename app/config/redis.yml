@@ -1,4 +1,3 @@
 development: redis://redis:6379
 test: redis://localhost:6379
-staging: <%= `heroku config:get REDIS_URL -a taimai` %>
-production: <%= `heroku config:get REDIS_URL -a taimai-demo` %>
+production: <%= ENV['REDIS_URL'] %>
