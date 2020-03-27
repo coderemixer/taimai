@@ -14,4 +14,4 @@ RUN bundle install
 COPY . /app
 COPY --from=dashboard /frontend/dist ./public/dashboard
 
-ENTRYPOINT [ "bash", "./entrypoint.sh"]
+ENTRYPOINT [ "bash", "./entrypoint.web.sh"]
