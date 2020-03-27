@@ -13,15 +13,17 @@ class Route < Sinatra::Base
     end
   end
 
-  namespace '/api', &ROOT_ROUTE
+  use Rack::SSL if ENV['RACK_ENV'] == 'production' # force HTTPS in production
 
-  if ENV['RACK_ENV'] == 'production'
-    set :public_folder, '/app/public'
+  unless ENV['HOST_DASHBOARD'].nil?
+    set :public_folder, ENV['HOST_DASHBOARD']
 
     get '/' do
-      File.read('/app/public/index.html')
+      File.read(File.join(ENV['HOST_DASHBOARD'], 'index.html'))
     end
   end
+
+  namespace '/api', &ROOT_ROUTE
 
   error 500 do |error|
     [

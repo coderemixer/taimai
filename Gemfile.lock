@@ -24,6 +24,8 @@ GEM
       rack (>= 1.6.0)
     rack-protection (2.0.7)
       rack
+    rack-ssl (1.4.1)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rake (12.3.3)
@@ -63,6 +65,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma
   rack-cors (~> 1.0)
+  rack-ssl (~> 1.4.1)
   rack-test
   rake (~> 12.0)
   sequel (~> 5.0)

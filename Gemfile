@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Gems for basic structure
 gem 'rake', '~> 12.0'
+gem 'rack-ssl', '~> 1.4.1'
 
 # Gems for web
 gem 'sinatra', '~> 2.0', require: 'sinatra/base'
