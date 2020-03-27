@@ -15,6 +15,14 @@ class Route < Sinatra::Base
 
   namespace '/api', &ROOT_ROUTE
 
+  if ENV['RACK_ENV'] == 'production'
+    set :public_folder, '/app/public'
+
+    get '/' do
+      File.read('/app/public/index.html')
+    end
+  end
+
   error 500 do |error|
     [
       500,
