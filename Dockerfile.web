@@ -1,6 +1,6 @@
 FROM node:13 AS dashboard
-RUN mkdir /frontend
 COPY ./dashboard /frontend
+WORKDIR /frontend
 RUN npm install
 RUN npm run build
 
