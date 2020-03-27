@@ -60,3 +60,6 @@ build-iPhoneSimulator/
 
 /.persistence/*
 !/.persistence/.gitkeep
+
+/app/public/*
+!/app/public/.gitkeep
