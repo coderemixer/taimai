@@ -12,6 +12,6 @@ COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 COPY . /app
-COPY --from=dashboard /frontend/dist ./public/dashboard
+COPY --from=dashboard /frontend/dist ./public
 
-ENTRYPOINT [ "bash", "./entrypoint.web.sh"]
+ENTRYPOINT [ "bash", "./entrypoint.sh"]

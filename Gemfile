@@ -19,10 +19,6 @@ gem 'sidekiq', '~> 6.0'
 gem 'yajl-ruby', require: 'yajl'
 gem 'yard', '~> 0.9.20', require: false
 
-group :development do
-  gem 'rerun'
-end
-
 group :test do
   gem 'cutest', '~> 1.2'
   gem 'rack-test'

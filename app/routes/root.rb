@@ -1,11 +1,11 @@
 # @!visibility private
 # Leave API docs for API docs
 ROOT_ROUTE = proc do
-  get '' do
+  get '/' do
     'Hello World'
   end
 
   get '/hello' do
-    'Hello World'
+    'Hello API'
   end
 end
