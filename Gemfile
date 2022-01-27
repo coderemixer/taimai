@@ -14,7 +14,7 @@ gem 'puma'
 gem 'pg', '~>1.1'
 gem 'sequel', '~> 5.0'
 gem 'ohm', '~> 3.1'
-gem 'sidekiq', '~> 6.0'
+gem 'sidekiq', '~> 6.4'
 
 # Gems for misc
 gem 'yajl-ruby', require: 'yajl'
