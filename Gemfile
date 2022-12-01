@@ -5,7 +5,7 @@ gem 'rake', '~> 12.0'
 gem 'rack-ssl', '~> 1.4.1'
 
 # Gems for web
-gem 'sinatra', '~> 2.0', require: 'sinatra/base'
+gem 'sinatra', '~> 2.2', require: 'sinatra/base'
 gem 'sinatra-contrib'
 gem 'rack-cors', '~> 1.0', require: 'rack/cors'
 gem 'puma'
